@@ -1,0 +1,204 @@
+/* Reset básico e definição da fonte padrão para toda a página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Evita que a página tenha rolagem pro lado */
+html {
+    overflow-x: hidden;
+}
+
+/* Define a largura máxima centralizada dos blocos */
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Flexbox na veia: organiza os elementos em linha */
+.container-flex {
+    display: flex;
+}
+
+/* Estilo básico do cabeçalho e rodapé */
+header, footer {
+    background-color: #192a56; /* azul escuro */
+    padding-top: 16px;
+    color: #fff;
+}
+
+/* Alinha o conteúdo do header e do footer: espaço entre e centralizado */
+header > .container,
+footer > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+/* Fixa o header no topo quando rola a página */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Joga ele na frente dos outros elementos */
+}
+
+/* Estilo do menu (nav) */
+nav {
+    background-color: #575fcf; /* azul mais claro */
+    padding: 16px 0;
+    display: none; /* esconde o menu por padrão (provavelmente será mostrado com JS) */
+}
+
+/* Estilo da lista de navegação */
+nav li {
+    list-style: none; /* tira as bolinhas */
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Links do menu */
+nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Ícone do menu hamburguer (3 linhas) */
+.menu-hamburguer {
+    width: 32px;
+    cursor: pointer;
+}
+
+.menu-hamburguer span {
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Imagem da loja na seção "Sobre a loja" */
+#sobre-a-loja img {
+    max-width: 400px;
+    margin-right: 24px;
+}
+
+/* Espaçamento padrão entre as seções */
+section {
+    padding: 48px 0;
+}
+
+/* Espaçamento abaixo do título da seção */
+section h2 {
+    margin-bottom: 16px;
+}
+
+/* Estilo da lista de veículos */
+.lista-veiculos {
+    flex-wrap: wrap; /* permite quebra de linha */
+    display: flex;
+    justify-content: center;
+    gap: 24px; /* espaçamento entre os itens */
+}
+
+/* Estilo individual dos veículos */
+.lista-veiculos li {
+    list-style: none;
+    max-width: 30%;
+    margin-bottom: 24px;
+}
+
+/* Imagem do veículo */
+.lista-veiculos li img {
+    max-width: 100%;
+}
+
+/* Título do carro */
+.lista-veiculos li h3 {
+    margin: 16px 0;
+}
+
+/* Classe não utilizada aqui, mas aparentemente serve pra dar margem lateral */
+.item-veiculo {
+    margin: 0 5%;
+}
+
+/* Estilo dos botões: verde, letras brancas, cantos arredondados */
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: green;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* Container de preço */
+.price {
+    margin: 16px 0;
+    display: block;
+}
+
+/* Preço antigo riscado */
+.price del {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Estilo dos campos do formulário */
+.form-campo {
+    margin-bottom: 16px;
+}
+
+/* Labels dos inputs */
+.form-campo label {
+    font-weight: bold;
+    display: block;
+}
+
+/* Inputs e textarea */
+.form-campo input,
+.form-campo textarea {
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+
+/* Textarea com tamanho fixo */
+.form-campo textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* Largura máxima do form */
+form {
+    max-width: 360px;
+}
+
+/* Tamanho do botão dentro do form */
+form button {
+    max-width: 120px;
+}
+
+/* Estilo da lista de ícones do rodapé */
+footer li {
+    list-style: none;
+    margin-left: 16px;
+}
+
+/* Tamanho dos ícones do rodapé */
+footer li img {
+    height: 32px;
+}
